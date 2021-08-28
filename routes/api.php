@@ -16,9 +16,6 @@ use App\Models\Plant;
 |
 */
 
-Route::get('anajulia', function() {
-    return response()->json(['Chatuba come cu' => 'E depois come xereca']);
-});
 Route::get('/plant', 'PlantController@index');
-Route::get('/plant/id', 'PlantController@show');
+Route::get('/plant/{plant}', 'PlantController@show');
 Route::post('/plant', 'PlantController@store');
